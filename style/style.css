@@ -45,6 +45,6 @@ footer {
 	color: var(--colourD);
 }
 legend {
-	float: left;
-    width: 100%;
+	float: left; /* ensure legend stays within fieldset border */
+    width: 100%; /* stops legend from displaying next to lower elements rather than above them */
 }
