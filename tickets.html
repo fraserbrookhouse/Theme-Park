@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Head section -->
+    <head>
+        <title>Adventure Planet - Tickets</title>
+        <meta charset="utf-8">
+        <meta name="description" content="This website is four our futuristic themepark.">
+        <meta name="author" content="Eduardo Osorio, David Tetour, Daniel Fyles, Geoff Lavoy, Fraser Brookhouse">
+        <meta name="keywords" content="'Theme Park' 'Family fun' Thrills">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Bangers&display=swap" rel="stylesheet">
+		<link href="style/style.css" rel="stylesheet">
+    </head>
+
+    <!-- Body section -->
+    <body>
+
+        <header>
+            <h1>Adventure Planet</h1>
+            <img src="img/ourlogo.png" alt="Our theme Park Logo" width= "200" height= "120">    
+        </header>
+                
+
+        <!-- Navigation -->
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="contact.html">Map and Contacts</a>
+          <a href="tickets.html">Tickets</a>
+        </nav>
+
+        <br>
+
+        <!-- Form to get user information about tickets -->
+        <form id = "ticketForm" action="/boughttickets.html" method="get">
+
+        <fieldset>
+            <legend>Ticket Details</legend>
+
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date">
+            
+            <br>
+
+            <label for="lname">Name</label>
+            <input type="text" name="lname" id="lname" placeholder="Your full name">
+            
+            <br>
+
+            <label for="adults">Number of adults</label>
+            <input type="number" name="adults" id="adults" value="1" min="0" max="20">
+            
+            <br>
+
+            <label for="children">Number of children under 12</label>
+            <input type="number" name="children" id="children" value="1" min="0" max="20">
+            <br>
+            Fast passes
+            <input type="radio" name="fastpassChoice" id="fastpassYes" value="yes">
+            <label for="fastpassYes">Yes</label>
+            <input type="radio" name="fastpassChoice" id="fastpassNo" value="no" checked>
+            <label for="fastpassNo">No</label>
+        </fieldset>
+            
+        <fieldset>  
+            <legend>Payment Details</legend>
+            
+            <label for="creditcard">Credit card number</label>
+            <input type="text" name="creditcard" id="creditcard" minlength="16" maxlength="16" size="20">
+            <br>
+            <label for="ccv">CCV</label>
+            <input type="text" name="ccv" id="ccv" minlength="3" maxlength="3" size="3">
+            <br>
+            <label for="expirationDate">Expiration date</label>
+            <input type="date" name="expirationDate" id="expirationDate">
+            <br>
+            <label for="nameOnCard">Name on card</label>
+            <input type="text" name="nameOnCard" id="nameOnCard" minlength="20" maxlength="20" size="20">  
+        </fieldset>
+
+
+            <button type="button" onclick="ClearForm()">Buy Tickets</button><br><br>
+            <!-- <button type="button" onclick="alert('Thank you for purchasing tickets!')">Buy Tickets</button><br><br> -->
+        </form>        
+
+        
+        <script>
+            function ClearForm() {
+                alert('Thank you for purchasing tickets!')
+                document.getElementById("ticketForm").reset();
+            }
+        </script>
+        
+        
+        <!-- Footer -->
+        <footer>
+            <div id="contactinfo">
+                <address>
+                    email us: <a href="mailto:myemailaddress@example.com">info@adventureplanet.com</a><br>
+                    address: 1 - 35 Street Theme Park Drive, Kampala
+                </address>
+            </div>
+            <a href="index.html"><img src="img/ourlogo.png" alt="Our theme Park Logo" width= "200" height= "120"></a>
+            <a href="contact.html">Map and Contacts</a>
+            <a href="tickets.html">Tickets</a>
+        </footer>
+
+    </body>
+</html>
