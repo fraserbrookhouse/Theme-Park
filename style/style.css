@@ -2,6 +2,7 @@
 	--colourA: #1E90FF; /* blue */
 	--colourB: #57B94E; /* green */
 	--colourC: #f33410; /* slightly tomato red */
+	--colourD: #ffffff; /* white */
 }
 
 body {
@@ -36,4 +37,10 @@ a {
 }
 a:hover {
 	color: var(--colourA);
+}
+fieldset {
+    background-color: white;
+}
+footer {
+	color: var(--colourD);
 }
