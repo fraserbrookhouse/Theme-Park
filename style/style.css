@@ -3,11 +3,13 @@
 	--colourB: #57B94E; /* green */
 	--colourC: #f33410; /* slightly tomato red */
 	--colourD: #ffffff; /* white */
+	--colourE: #000000; /* black */
 }
 
 body {
 	font-family: 'Arimo', sans-serif;
 	background-color: black;
+	color: var(--colourD);
 }
 h1, h2, h3, h4, h5 {
 	font-family: 'Bangers', cursive;
@@ -40,6 +42,7 @@ a:hover {
 }
 fieldset {
     background-color: white;
+    color: var(--colourE);
 }
 footer {
 	color: var(--colourD);
