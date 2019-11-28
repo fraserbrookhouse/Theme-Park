@@ -44,3 +44,7 @@ fieldset {
 footer {
 	color: var(--colourD);
 }
+legend {
+	float: left;
+    width: 100%;
+}
