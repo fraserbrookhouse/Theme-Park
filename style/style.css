@@ -1,3 +1,8 @@
+@font-face {
+    src: url(fonts/Molot-webfont.ttf);
+    font-family: molot;
+}
+
 :root {
 	--colourA: #1E90FF; /* blue */
 	--colourB: #57B94E; /* green */
@@ -12,7 +17,7 @@ body {
 	color: var(--colourD);
 }
 h1, h2, h3, h4, h5 {
-	font-family: 'Bangers', cursive;
+	font-family: 'molot', sans-serif;
 	font-weight: normal;
 }
 h1 {
@@ -36,6 +41,7 @@ p {
 a {
 	color: var(--colourB);
 	font-weight: 700;
+     text-decoration-line: none;
 }
 a:hover {
 	color: var(--colourA);
