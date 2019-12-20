@@ -1,22 +1,38 @@
+/********************************/
+/*        All Pages            */
+
+* {
+    box-sizing: border-box;
+}
+
+/*       Using this font    */
 @font-face {
     src: url(fonts/Molot-webfont.ttf);
     font-family: molot;
 }
 
+/* Variables for colours */
 :root {
 	--colourA: #1E90FF; /* blue */
-	--colourB: #57B94E; /* green */
+	--colourB: #FFBD59; /* yellow/orange */
 	--colourC: #f33410; /* slightly tomato red */
 	--colourD: #ffffff; /* white */
 	--colourE: #000000; /* black */
+    --bgcolour: #0A0F20; /* very dark blue */
 }
+
+
 
 body {
 	font-family: 'Arimo', sans-serif;
-	background-color: black;
+/*	background-color: #0A0F20;*/
+    background-color: var(--bgcolour);
 	color: var(--colourD);
+    padding: 20px
 }
-h1, h2, h3, h4, h5 {
+
+
+h1, h2, h3 {
 	font-family: 'molot', sans-serif;
 	font-weight: normal;
 }
@@ -33,7 +49,8 @@ h3 {
 	font-size: 36px;
 }
 h4 {
-	font-size: 30px;
+	font-size: 15px;
+    font-family: 'Arimo', sans-serif;
 }
 p {
 	color: var(--colourA);
@@ -41,7 +58,7 @@ p {
 a {
 	color: var(--colourB);
 	font-weight: 700;
-     text-decoration-line: none;
+    text-decoration-line: none;
 }
 a:hover {
 	color: var(--colourA);
@@ -57,3 +74,257 @@ legend {
 	float: left; /* ensure legend stays within fieldset border */
     width: 100%; /* stops legend from displaying next to lower elements rather than above them */
 }
+
+
+
+
+
+/********************************/
+/*          Header             */
+
+header{
+    background:black;
+    border-radius: 20px;
+    text-align: left;
+    width:100%;
+    padding: 25px;
+    margin: 5px;
+}
+
+
+header img{
+    float: right;
+}
+
+
+
+
+/********************************/
+/*        Navigation            */
+nav{
+    background:black;
+    border-radius: 20px;
+    text-align:left;
+    width:100%;
+    padding:1px;
+}
+
+nav ul{
+    list-style:none;
+    margin:5px;
+    padding:1px;
+    text-align:left;
+}
+
+nav li{
+    display:inline;
+/*    border: 1px solid #FFBD59;*/
+    border-radius: 5px;
+    padding:1px;
+    font-size: 20px;
+}
+
+nav li a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 1em;
+    color: var(--colourB);
+    display:inline-block;
+    padding:10px;
+
+}
+
+
+
+   
+/********************************/
+/*        Set up the grid       */
+/*        for index.html        */
+header{grid-area: header;}
+nav { grid-area: nav; }
+.featured{grid-area: featured;}
+.attraction1{grid-area: attraction1;}
+.attraction2{grid-area: attraction2;}
+.attraction3{grid-area: attraction3;}
+.attraction4{grid-area: attraction4;}
+.attraction5{grid-area: attraction5;}
+.attraction6{grid-area: attraction6;}
+footer{grid-area: footer;}
+    
+    
+.wrapper-index {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+      "header header"
+      "nav nav"
+      "featured featured"
+      "attraction1 attraction2"
+      "attraction3 attraction4"
+      "attraction5 attraction6"
+      "footer footer";
+}
+
+.wrapper-index > div {
+    border-radius: 20px;
+    background-color: black;
+    margin: 5px;
+    color: #d9480f;
+    border: 1px solid white;
+}
+
+
+
+/*********************************/
+/* Set padding and round corners */
+/* for featured event            */
+.featured {
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+/*********************************/
+/* Settings for the attractions  */
+.attraction{
+    border-radius: 20px;
+    padding:10px;
+    margin: 5px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.attraction img{
+    height: 300px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 97px 9px rgba(83,110,219,1);
+}
+
+
+
+/*********************************/
+/*   Settings for the footer     */
+footer{
+    border-radius: 20px;
+    padding:10px;
+    margin: 5px;
+    background: black;
+}
+
+footer img{
+    float: right;
+}
+
+
+img.ft-sm-link {
+    width: 30px;
+    height: 30px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.footer-social-links nav li{
+    display:inline;
+    border-radius: 5px;
+    padding:1px;
+    font-size: 20px;
+    border: 1px solid black;
+}
+
+.footer-social-links nav li a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 1em;
+    color: var(--colourB);
+    display:inline-block;
+    padding:10px;
+}
+
+
+
+
+/********************************/
+/*        Set up the grid       */
+/*        for contact.html      */
+header{grid-area: header;}
+nav { grid-area: nav; }
+.contactinfo{grid-area: featured;}
+.map{grid-area: map;}
+footer{grid-area: footer;}
+    
+    
+.wrapper-contact {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+      "header header"
+      "nav nav"
+      "featured featured"
+      "contactinfo map"
+      "footer footer";
+}
+
+.wrapper-contact > div {
+    border-radius: 20px;
+    background-color: black;
+    margin: 5px;
+    color: #d9480f;
+}
+
+
+
+/********************************/
+/*          Tickets page        */
+
+fieldset{
+    background-color: var(--bgcolour);
+    width: 500px;
+    color: white;
+}
+
+input[type=text] {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+input[type=number] {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+input[type=date] {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+.button {
+  background-color: #555555;
+  border: 2px solid #555555;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;  Safari 
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 15px;
+}
+    
+
+
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
+
