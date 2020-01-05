@@ -1,15 +1,20 @@
 /********************************/
 /*        All Pages            */
 
+
+/* include padding and border in width and height for all elements */
 * {
     box-sizing: border-box;
 }
 
-/*       Using this font    */
+/* Using Molot font from the web */
+/* Designed by 	Roman Yershov */
+/* Downloaded from https://www.cufonfonts.com/font/molot */
 @font-face {
     src: url(fonts/Molot-webfont.ttf);
     font-family: molot;
 }
+
 
 /* Variables for colours */
 :root {
@@ -18,20 +23,19 @@
 	--colourC: #f33410; /* slightly tomato red */
 	--colourD: #ffffff; /* white */
 	--colourE: #000000; /* black */
-    --bgcolour: #0A0F20; /* very dark blue */
+    --bgcolour: #160934; /* very dark purple */
 }
 
 
-
+/* Set up properties for the body */
 body {
 	font-family: 'Arimo', sans-serif;
-/*	background-color: #0A0F20;*/
     background-color: var(--bgcolour);
 	color: var(--colourD);
     padding: 20px
 }
 
-
+/* Set up properties for the headings */
 h1, h2, h3 {
 	font-family: 'molot', sans-serif;
 	font-weight: normal;
@@ -39,6 +43,10 @@ h1, h2, h3 {
 h1 {
 	color: var(--colourA);
 	font-size: 48px;
+    text-shadow: 4px 4px #36187B;
+}
+h1:hover {
+    text-shadow: 6px 6px #36187B; /*increases the size of the shadow on hover of h1 */
 }
 h2 {
 	color: var(--colourB);
@@ -52,6 +60,8 @@ h4 {
 	font-size: 15px;
     font-family: 'Arimo', sans-serif;
 }
+
+/* Set up properties of other elements */
 p {
 	color: var(--colourA);
 }
@@ -61,15 +71,20 @@ a {
     text-decoration-line: none;
 }
 a:hover {
-	color: var(--colourA);
+	color: var(--colourA); /* changes colour when hovering over a link */
 }
+
+/* used on the form on the tickets page */
 fieldset {
     background-color: white;
     color: var(--colourE);
 }
+
+/* footer colour */
 footer {
 	color: var(--colourD);
 }
+
 legend {
 	float: left; /* ensure legend stays within fieldset border */
     width: 100%; /* stops legend from displaying next to lower elements rather than above them */
@@ -186,6 +201,11 @@ footer{grid-area: footer;}
     border-radius: 20px;
 }
 
+.featured img:hover{
+    border-radius: 20px;
+    box-shadow: 0px 0px 97px 9px rgba(83,110,219,1);
+}
+
 
 /*********************************/
 /* Settings for the attractions  */
@@ -198,6 +218,13 @@ footer{grid-area: footer;}
 }
 
 .attraction img{
+    height: 300px;
+    width: 400px;
+    border-radius: 20px;
+}
+
+/* this puts a nice shadow around the images when hovering */
+.attraction img:hover{
     height: 300px;
     width: 400px;
     border-radius: 20px;
@@ -225,6 +252,7 @@ img.ft-sm-link {
     height: 30px;
     text-align: left;
     border-radius: 5px;
+    box-shadow: 4px 4px #36187B;
 }
 
 .footer-social-links nav li{
@@ -321,7 +349,7 @@ input[type=date] {
 }
     
 
-
+/* change colour of button when hovering */
 .button:hover {
     background-color: white;
     color: black;
